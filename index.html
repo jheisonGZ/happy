@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="birthdayCard" onclick="toggleAudio()">
+            <div class="outside">
+                <p class="click-here" onclick="toggleAudio()">Dale clic aquí para una sorpresa</p>
+                <h1>Happy Birthday</h1>
+                <div class="click-here" onclick="toggleAudio()">Dale clic aquí para una sorpresa</div>
+            </div>
+            <div class="inside">
+                <div class="audio-container">
+                    <audio id="birthdayAudio">
+                        <source src="audio\feliz_cumple.mp3" type="audio/mp3">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <div class="audio-message">
+                        <h6>
+                            ¡Feliz cumpleaños! En este día especial, quiero desearte mucha alegría, amor y éxito. Que cada momento esté lleno de felicidad y que este nuevo año de vida te traiga todas las cosas maravillosas que mereces. Aunque nuestros caminos hayan tomado direcciones diferentes, siempre valoraré los buenos momentos que compartimos. 
+                            ¡Que tengas un día increíble y un año lleno de logros!
+                        </h6>
+                    </div>
+                </div class="posicion">
+                <img src="cakegif.gif" alt="Pastel de cumpleaños">
+                <button onclick="hazClicAqui()">Haz clic aquí!!</button>
+            </div>
+            
+        </div>
+
+        <div class="block">
+            <div class="frames frame1">
+                <img src="img1.png" alt="">
+                <p>Aunque este cumpleaños puede sentirse diferente, te deseamos lo mejor, ¡feliz cumpleaños!</p>
+            </div>
+            <div class="frames frame2">
+                <img src="img2.png" alt="">
+                <p>En tu día, celebra el amor que siempre vivirá en tus recuerdos.</p>
+            </div>
+            <div class="frames frame3">
+                <img src="img3.png" alt="">
+                <p>"Que encuentres consuelo y fuerza en este día especial. Feliz cumpleaños."</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Desarrollado por JG
+    </footer>
+
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById('birthdayAudio');
+            
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
